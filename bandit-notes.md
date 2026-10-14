@@ -30,6 +30,18 @@ Notes from the [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) wa
 - `ls -a` lists all files, including hidden ones.
 - Configuration and credential files are often hidden, so knowing how to find them matters in security work.
 
+## Level 4 - Identifying file types
+- Filenames do not guarantee the content: a file's real type can differ from what its name suggests.
+- `file` reports the real type of a file (for example `ASCII text` or `data`) without opening it.
+- Combining it with a wildcard checks a whole folder at once.
+- Printing binary data with `cat` can corrupt the terminal display; `reset` restores it.
+
+## Level 5 - Searching by file properties
+- `find` locates files by properties such as type, size and permissions instead of by opening them one by one.
+- `-size` needs a unit (`c` for bytes); without one, `find` counts in 512-byte blocks.
+- `! -executable` excludes executable files, and conditions can be combined to narrow results.
+- Lesson: filter first, then read only the files that match.
+
 ## Commands practiced so far
 | Command | Purpose |
 |---------|---------|
@@ -37,6 +49,8 @@ Notes from the [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) wa
 | `ls`, `ls -a` | List files (and hidden files) |
 | `cd`, `pwd` | Move around and show the current directory |
 | `cat` | Read a file |
+| `file` | Identify the type of a file |
+| `find` | Search files by name, type, size and permissions |
 | `exit` | Leave the current session |
 
 ## Habits I am building
@@ -49,4 +63,6 @@ Notes from the [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) wa
 - [x] Level 1
 - [x] Level 2
 - [x] Level 3
-- [ ] Level 4
+- [x] Level 4
+- [x] Level 5
+- [ ] Level 6
