@@ -42,6 +42,24 @@ Notes from the [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) wa
 - `! -executable` excludes executable files, and conditions can be combined to narrow results.
 - Lesson: filter first, then read only the files that match.
 
+## Level 6 - Searching the whole system by owner and group
+- `find` can start from the root (`/`) and filter by `-user`, `-group` and `-size`.
+- Searching system-wide produces many `Permission denied` errors; redirecting stderr (`2>/dev/null`) keeps the output readable.
+- Understanding file ownership is a core part of Linux security.
+
+## Level 7 - Filtering text with grep
+- `grep` prints only the lines that contain a given pattern.
+- It is the right tool when a file is too large to read manually.
+
+## Level 8 - Sorting and comparing lines with pipes
+- `sort` groups identical lines together, and `uniq` works on adjacent duplicates (`uniq -u` shows lines that occur only once).
+- The pipe (`|`) sends the output of one command into another, which is the basis of most command-line workflows.
+
+## Level 9 - Extracting text from binary files
+- `strings` extracts human-readable text from binary data.
+- Chaining `strings` with `grep` filters that text down to what matters.
+- Binary files should not be printed directly to the terminal.
+
 ## Commands practiced so far
 | Command | Purpose |
 |---------|---------|
@@ -50,7 +68,11 @@ Notes from the [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) wa
 | `cd`, `pwd` | Move around and show the current directory |
 | `cat` | Read a file |
 | `file` | Identify the type of a file |
-| `find` | Search files by name, type, size and permissions |
+| `find` | Search files by name, type, size, owner and permissions |
+| `grep` | Filter lines by text |
+| `sort`, `uniq` | Sort lines and find unique or duplicate ones |
+| `strings` | Extract readable text from binary files |
+| `\|` (pipe) | Chain the output of one command into another |
 | `exit` | Leave the current session |
 
 ## Habits I am building
@@ -65,4 +87,8 @@ Notes from the [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) wa
 - [x] Level 3
 - [x] Level 4
 - [x] Level 5
-- [ ] Level 6
+- [x] Level 6
+- [x] Level 7
+- [x] Level 8
+- [x] Level 9
+- [ ] Level 10
