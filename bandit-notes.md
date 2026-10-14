@@ -39,6 +39,9 @@ Notes from the [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) wa
 | `cat` | Read a file |
 | `exit` | Leave the current session |
 
+## Cheat sheet
+- [cat-cheatsheet.md](cat-cheatsheet.md): every way to write `cat` for different filenames.
+
 ## Habits I am building
 - Try first, look things up after.
 - Read the error message before changing anything.
